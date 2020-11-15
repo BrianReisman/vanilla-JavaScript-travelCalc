@@ -1,0 +1,12 @@
+*{
+  /* background-color: tomato; */
+}
+input, label, div{
+  font-size: 24px;
+}
+input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 55px;
+  border: 2px solid tomato;
+}
