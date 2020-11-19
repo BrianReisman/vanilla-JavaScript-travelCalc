@@ -47,15 +47,6 @@ const bodyDiv = document.createElement('div');
 document.body.appendChild(bodyDiv);
 
 
-//!State management
-// function setState(stateSet) {
-//   let state = stateSet;
-//   return state;
-// }
-// const state = setState('hi');
-// console.log(state);
-
-
 
 const mapCategoryArr = allCategoriesArr.map(cat => {
   makeEvtListner(document.querySelector(`#${cat}`))
@@ -65,15 +56,14 @@ function makeEvtListner(ele){
   ele.addEventListener("input", updateValue(ele));
 
   function updateValue() {
-    console.log(ele.name); //*if ele.name is present in the daily arr, treat as fixed expense. Else, treat as daily.
+    // console.log(ele.name); //*if ele.name is present in the daily arr, treat as fixed expense. Else, treat as daily.
     if(dailyArr.includes(ele.name)){
-      console.log('daily category')
+      // console.log('daily category')
     } else if (fixedArr.includes(ele.name)) {
-      console.log('fixed category')
+      // console.log('fixed category')
     } else {
       throw Error ('issue in function updateValue?')
       alert('issue in function updateValue')
     }
   };
 };
-
